@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>절대색감 게임 - 색상 차이를 찾아보세요!</title>
+    <meta name="description" content="화면에 보이는 여러 개의 네모 중에서 색이 다른 하나를 찾는 절대색감 게임입니다. 60초 안에 최대한 많은 단계를 완료해보세요!">
+    <meta name="keywords" content="절대색감, 색상게임, 색감테스트, 컬러게임, 색상차이, 게임">
+    <meta name="author" content="Color Game">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://color-game-dain-sqtlpe3wm-da-ins-projects.vercel.app/">
+    <meta property="og:title" content="절대색감 게임 - 색상 차이를 찾아보세요!">
+    <meta property="og:description" content="화면에 보이는 여러 개의 네모 중에서 색이 다른 하나를 찾는 절대색감 게임입니다. 60초 안에 최대한 많은 단계를 완료해보세요!">
+    <meta property="og:image" content="https://color-game-dain-sqtlpe3wm-da-ins-projects.vercel.app/og-image.html">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://color-game-dain-sqtlpe3wm-da-ins-projects.vercel.app/">
+    <meta property="twitter:title" content="절대색감 게임 - 색상 차이를 찾아보세요!">
+    <meta property="twitter:description" content="화면에 보이는 여러 개의 네모 중에서 색이 다른 하나를 찾는 절대색감 게임입니다. 60초 안에 최대한 많은 단계를 완료해보세요!">
+    <meta property="twitter:image" content="https://color-game-dain-sqtlpe3wm-da-ins-projects.vercel.app/og-image.html">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 시작 화면 -->
+    <div id="start-screen" class="screen">
+        <div class="container">
+            <h1>🎨 절대색감 게임</h1>
+            <div class="game-rules">
+                <h2>게임 방법</h2>
+                <ul>
+                    <li>화면에 보이는 여러 개의 네모 중에서 <strong>색이 다른 하나</strong>를 찾으세요!</li>
+                    <li>단계가 올라갈수록 네모의 개수가 늘어나고 색상 차이가 미세해집니다</li>
+                    <li>정답을 찾으면 다음 단계로 진행됩니다</li>
+                    <li><strong>틀리면 3초</strong>가 감소하고 화면이 흔들립니다</li>
+                    <li><strong>60초</strong> 이내에 최대한 많은 단계를 완료하세요!</li>
+                </ul>
+            </div>
+            <button id="start-btn" class="btn">게임 시작</button>
+        </div>
+    </div>
+
+    <!-- 게임 화면 -->
+    <div id="game-screen" class="screen hidden">
+        <div class="game-container">
+            <div class="level-display">
+                단계: <span id="current-level">1</span>
+            </div>
+            <div class="timer-display">
+                <span id="timer">60</span>초
+            </div>
+            <div id="game-board" class="game-board"></div>
+        </div>
+    </div>
+
+    <!-- 결과 화면 -->
+    <div id="result-screen" class="screen hidden">
+        <div class="container">
+            <h1>🎉 게임 종료!</h1>
+            <div class="result-info">
+                <h2>최종 결과</h2>
+                <div class="score">
+                    <span class="score-label">도달 단계:</span>
+                    <span id="final-level" class="score-value">0</span>
+                </div>
+                <div class="score">
+                    <span class="score-label">최고 점수:</span>
+                    <span id="high-score" class="score-value">0</span>
+                </div>
+            </div>
+            <div class="result-actions">
+                <button id="restart-btn" class="btn">다시 시작</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
