@@ -151,8 +151,8 @@ h1 {
 }
 
 .color-square.selected {
-    border-color: #6c757d;
-    box-shadow: 0 0 0 2px rgba(108, 117, 125, 0.3);
+    border-color: transparent;
+    box-shadow: none;
 }
 
 /* 결과 화면 */
