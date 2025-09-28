@@ -147,7 +147,7 @@ h1 {
 }
 
 .color-square:hover {
-    border-color: #6c757d;
+    border-color: transparent;
 }
 
 .color-square.selected {
